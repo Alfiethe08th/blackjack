@@ -1,0 +1,19 @@
+.menu-container-img{
+    width:4w;
+    height:4vw;
+    transition: .1s;
+    position: fixed;
+    top:0;
+    margin: 25px 20px;
+}
+
+.menu-container-img:hover{
+    transition: .1s;
+    width:3.8w;
+    height:3.8vw;
+}
+.menu-container-img:active{
+    transition: .1s;
+    width:3.6w;
+    height:3.6vw;
+}

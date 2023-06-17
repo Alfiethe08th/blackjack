@@ -1,0 +1,126 @@
+$show-btn-height: 50px;
+
+@font-face {
+    font-family: 'manrope';
+    src: url('../../assets/fonts/manrope/manrope-medium.otf');
+}
+@font-face {
+    font-family: 'manrop-bold';
+    src: url('../../assets/fonts/manrope/manrope-bold.otf');
+}
+// $manrop-font: manrope;
+
+.home-content, .target{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40vh;
+    margin-bottom: 80vh;
+    transition: .4s;
+}
+.home-title{
+    z-index: 3;
+    font-family: manrop-bold;
+    height: auto;
+    width: auto;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    white-space: normal;
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: none;
+    text-align: center;
+    line-height: 8vw;
+    letter-spacing: -2px;
+    font-weight: bold;
+    font-size: 6.3vw;
+    transform-origin: 50% 50%;
+    opacity: 1;
+    transform: translate(0px, 0px);
+    visibility: visible;
+    margin: 80px 0;
+}
+.egg{
+    width:200px;
+    height:300px;
+    margin: 0 auto;
+    background-color: lightcyan;
+    -moz-border-radius: 100px / 50px;
+    -webkit-border-radius: 100px / 50px;
+    border-radius: 100px / 50px;
+    -webkit-transform: rotate(15deg);
+    opacity:0.85;
+    margin-bottom: 50px;
+    display: none;
+}
+.show-btn-main{
+    width: 18vw;
+    height:$show-btn-height;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    transition: .3s;
+}
+.show-btn{
+    width:100%;
+    height: 100%;
+    text-decoration: none;
+    background-color: white;
+    opacity: 0.3;
+    border: 4px solid white;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    transition: .3s;
+}
+.show-btn-main:hover{
+    transition: .3s;
+    width: 17vw;
+    height: 45px;
+    .show-btn-label{
+        transition: .3s;
+        font-size: 1.2vw;;
+    }
+}
+
+.show-btn-main:active{
+    transition: .3s;
+    width: 16vw;
+    height: 40px;
+}
+@keyframes slidein {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+.show-btn-label{
+    font-family: manrope;
+    font-weight: 600;
+    font-size: 1.3vw;
+    color:white;
+    margin: 0 auto;
+    vertical-align: middle;
+    height: $show-btn-height;
+    line-height: $show-btn-height;
+    text-align: center;
+    transition: .3s;
+}
+@keyframes slideinText {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.target{
+    height: 500px;
+    background-color: green;
+    transition: .4s;
+}

@@ -1,0 +1,25 @@
+<div class="home-content">
+    <div class="home-content-sub">
+        <div class="message" *ngIf="showMessage">
+            <!-- <div>"message"</div> -->
+            <div>{{message}}</div>
+        </div>
+        <div class="drawing-board">
+            <div class="drawncard dealersDrawnCard">
+                <div class="drawncardValue dealersDrawncardValue">{{dealersHandValue}}</div>
+                <img *ngFor="let hand of dealersHand" class="drawnCardImg dealerDrawnCardImg" src="{{hand}}">
+            </div>
+            <div class="drawncard playersDrawnCard">
+                <div class="drawncardValue playersDrawncardValue">{{playersHandValue}}</div>
+                <img *ngFor="let hand of playersHand" class="drawnCardImg playerDrawnCardImg" src="{{hand}}">
+            </div>
+        </div>
+        <div class="player-title" (click)="resetGame()">{{player}}</div>
+    </div>
+    <div class="deal-btn" (click)="startDealing()" *ngIf="!isDeal">Deal</div>
+    <div class="hit-or-stop-btn" *ngIf="isDeal">
+        <div class="hit-btn" (click)="!isHitBtnDisabled && hitMe()">Hit</div>
+        <div class="stop-btn"(click)="stopDealing()" *ngIf="isDisplayStandBtn">Stand</div>
+        <div class="stop-btn"(click)="shuffleCards()" *ngIf="isDisplayShuffleBtn">Shuffle</div>
+    </div>
+</div>

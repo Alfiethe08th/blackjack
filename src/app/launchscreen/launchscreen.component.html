@@ -1,0 +1,23 @@
+<div class="launch-main" *ngIf="!iDisagree">
+    <div class="launch-heading">
+        <div class="launch-title">{{disclosureLabel.title}}</div>
+        <div class="launch-title">{{disclosureLabel.icon}}</div>
+    </div>
+    <div class="launch-message">
+        {{disclosureLabel.message}}
+    </div>
+    <div *ngFor="let action of disclosureLabel.actions "><button (click)="handleDisclosure(action)">{{action}}</button></div>
+</div>
+
+<div *ngIf="iDisagree">
+    <div class="launch-main">
+        <div class="launch-heading">
+            <div class="launch-title">{{disclosureLabel.title}}</div>
+            <div class="launch-title">{{disclosureLabel.icon}}</div>
+        </div>
+        <div class="launch-message">
+            {{disclosureLabel.message}}
+        </div>
+        <button (click)="returnHome()">Return</button>
+    </div>
+</div>

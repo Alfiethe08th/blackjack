@@ -1,0 +1,184 @@
+$show-btn-height: 50px;
+
+@font-face {
+    font-family: 'manrope';
+    src: url('../../assets/fonts/manrope/manrope-medium.otf');
+}
+@font-face {
+    font-family: 'manrop-bold';
+    src: url('../../assets/fonts/manrope/manrope-bold.otf');
+}
+
+.home-content, .target{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 80vh;
+    transition: .4s;
+}
+// .home-content-sub{
+//     width:400px;
+// }
+.drawing-board{
+    font-family: manrop-bold;
+    color: rgb(255, 255, 255);
+    font-size: 2vw;
+    width:500px;
+    height:500px;
+    background-color:white;
+    margin: 0 auto;
+    border-radius: 4px;
+    // margin-bottom: 30px;
+    padding-bottom: 30px;
+    display: block;
+    overflow-y: hidden;
+    text-align: center;
+}
+.drawing-board::-webkit-scrollbar {
+    display: none;
+}
+.drawncard{
+    position: relative;
+    font-size: 50px;
+    color: #2d3542;
+    width:80%;
+    height:200px;
+    margin: 0 auto;
+    overflow-x:scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    // background-color: red;
+    padding-bottom:45px;
+}
+.dealersDrawnCard{
+    margin-top:50px;
+}
+.drawnCardImg{
+    display: inline-block;
+    margin:0px 15px;
+    width:100px;
+}
+.dealerDrawnCardImg{
+    margin:0px 15px;
+}
+.drawncardValue{
+    font-size: 35px;
+    color: #2d3542;
+    width:100px;
+    // position: fixed;
+    // background: white;
+}
+.message, .player-title{
+    font-family: manrop-bold;
+    color: rgb(255, 255, 255);
+    // color:red;
+    font-size: 2vw;
+    display: block;
+    margin: 0 auto;
+    margin-top:20px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: .5s;
+    cursor: pointer;
+}
+.message{
+    position: fixed;
+    top:30px;
+    left:50%;
+    transform: translate(-50%, 0);
+}
+.deal-btn{
+    margin: 0 auto;
+    font-size: 1.2vw;
+    color: white;
+    width:100px;
+    font-family: manrop-bold;
+    background-color: #2d3542;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: center;
+    transition: .3s;
+    padding:10px 0px;
+    cursor: pointer;
+}
+.hit-or-stop-btn{
+    width: 250px;
+    height:$show-btn-height;
+    margin: 0 auto;
+    transition: .3s;
+    cursor: pointer;
+}
+.hit-btn, .stop-btn{
+    margin: 0 auto;
+    float: left;
+    font-size: 1.2vw;
+    color: white;
+    font-family: manrop-bold;
+    height: 100%;
+    text-decoration: none;
+    background-color: rgb(42, 127, 42);
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: .3s;
+    padding:15px 15px 0px;
+}
+.stop-btn{
+    float: right;
+    background-color: rgb(195, 45, 45);
+}
+
+.hit-btn:hover, .stop-btn:hover, .deal-btn:hover{
+    transition: .2s;
+    transform: scale(95%);
+}
+
+
+.hit-btn-main, .stop-btn-main{
+    width: 18vw;
+    height:$show-btn-height;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    transition: .2s;
+}
+
+.hit-btn:active, .stop-btn:active, .deal-btn:active{
+    transition: .2s;
+    transform: scale(85%);
+}
+@keyframes slidein {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+.show-btn-label{
+    font-family: manrope;
+    font-weight: 600;
+    font-size: 1.3vw;
+    color:white;
+    margin: 0 auto;
+    vertical-align: middle;
+    height: $show-btn-height;
+    line-height: $show-btn-height;
+    text-align: center;
+    transition: .3s;
+}
+@keyframes slideinText {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.target{
+    height: 500px;
+    background-color: green;
+    transition: .4s;
+}
